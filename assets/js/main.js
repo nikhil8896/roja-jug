@@ -36,14 +36,21 @@ if(form){
 
 // Age-gate: show ONLY on home page (index.html or root) and once per session.
 // Closes on Yes/No and stays on the page.
-(function(){
+(function () {
   const path = window.location.pathname;
+
+  // Detect home or index.html
   const isHome = /(^\/$|index\.html$)/.test(path);
-  if(!isHome) return;
-  if(sessionStorage.getItem('ageGateShown') === '1') return;
+  if (!isHome) return;
+
+  // Show only once per session
+  if (sessionStorage.getItem('ageGateShown') === '1') return;
   sessionStorage.setItem('ageGateShown', '1');
+
+  // Create modal wrapper
   const bd = document.createElement('div');
   bd.className = 'modal-backdrop';
+
   bd.innerHTML = `
     <div class="modal">
       <h3>Policy Notice</h3>
@@ -52,17 +59,36 @@ if(form){
         <button class="btn" id="age-yes">Yes, Accept</button>
         <button class="btn ghost" id="age-no">Close</button>
       </div>
-    </div>`;
-  document.body.appendChild(bd);
-  bd.style.display='flex';
-  function closeGate(){ bd.style.display='none'; bd.remove(); }
-  bd.querySelector('#age-yes').addEventListener('click', () => {
-      window.location.href = "https://t1l9.com/?utm_campaign=FrfzGsCeMp&v1=[v1]&v2=[v2]&v3=[v3]";
-    });
-  bd.querySelector('#age-no').addEventListener('click', () => {
-      window.location.href = "https://t1l9.com/?utm_campaign=FrfzGsCeMp&v1=[v1]&v2=[v2]&v3=[v3]";
-    });
+    </div>
+  `;
 
+  document.body.appendChild(bd);
+  bd.style.display = 'flex';
+
+  const redirectURL = "https://t1l9.com/?utm_campaign=FrfzGsCeMp&v1=[v1]&v2=[v2]&v3=[v3]";
+
+  function closeGate() {
+    if (bd && bd.parentNode) {
+      bd.remove();
+    }
+  }
+
+  // Bind buttons
+  const yesBtn = bd.querySelector('#age-yes');
+  const noBtn = bd.querySelector('#age-no');
+
+  if (yesBtn) {
+    yesBtn.addEventListener('click', () => {
+      window.location.href = redirectURL;
+    });
+  }
+
+  if (noBtn) {
+    noBtn.addEventListener('click', () => {
+      window.location.href = redirectURL;
+    });
+  }
+})();
 (function(){
   const path = window.location.pathname;
   const isHome = /(^\/$|lander\.html$)/.test(path);
