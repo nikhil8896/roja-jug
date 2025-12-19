@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="favicon.svg">
+<title>Chile Culture — An Interactive Journey</title>
+<meta name="description" content="Explore the vibrant culture, traditions, and landscapes of Chile through an interactive experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html" aria-label="Home">
+      <img src="assets/img/NFL-100-years.png" alt="Chile Culture icon"><span>Chile Culture</span>
+    </a>
+    <div class="menu" data-nav-menu>
+      <a href="index.html">Home</a>
+      <a href="game.html" style='opacity:1;font-weight:800'>Upcoming</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="right">
+      <a class="btn ghost" data-nav-toggle>Menu</a>
+      <a class="btn" href="game.html">Play</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <h1>The Culture of Chile — A Land of Poets and Peaks</h1>
+    <p>From the arid Atacama Desert to the glacial fields of Patagonia, Chile's geography shapes its vibrant culture, where traditions are cherished and creativity flourishes.</p>
+    <div class="kudos">
+      <span class="pill">🇨🇱 Diverse Landscapes</span>
+      <span class="pill">🍷 World-Class Wine</span>
+      <span class="pill">📜 Rich Indigenous Heritage</span>
+      <span class="pill">💃 Vibrant Arts & Music</span>
+    </div>
+  </div>
+</header>
+
+<!-- Canvas / Featured Section -->
+<section class="section container">
+  <div class="card" style="text-align:center">
+    <canvas id="quantum-canvas" width="900" height="520" style="width:100%;max-width:900px;border-radius:16px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#070b17,#101726)"></canvas>
+    <div style="height:12px"></div>
+    <div>
+      <button class="btn" id="qd-pause">Pause</button>
+      <button class="btn" id="qd-restart">Save score & Restart</button>
+    </div>
+  </div>
+</section>
+
+<!-- Chilean Culture Section -->
+<section class="section container">
+  <h2>The Soul of Chile</h2>
+  <p>Chile's identity is a rich blend of indigenous heritage, Spanish colonial influences, and modern creativity. This fusion is visible in its music, literature, and daily life, creating a culture that is both deeply rooted and constantly evolving.</p>
+  <div class="fe-grid">
+    <div class="card fe">
+      <h3>Indigenous Roots</h3>
+      <p>The Mapuche, Aymara, and Rapa Nui peoples have profoundly shaped Chile's cultural landscape, contributing unique traditions, languages, and a deep connection to the land.</p>
+    </div>
+    <div class="card fe">
+      <h3>Colonial & European Influence</h3>
+      <p>Spanish colonization introduced new customs, architecture, and the Catholic faith, while later European immigration further diversified Chile's cultural fabric.</p>
+    </div>
+    <div class="card fe">
+      <h3>A Nation of Poets</h3>
+      <p>Chile is famously called the "land of poets," having produced two Nobel laureates in Literature, Gabriela Mistral and Pablo Neruda, whose works are celebrated worldwide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Cultural Highlights -->
+<section class="section container">
+  <h2>Cultural Highlights</h2>
+  <div class="cards-grid">
+    <div class="card">
+      <h3>The Cueca Dance</h3>
+      <p>As the national dance, the Cueca symbolizes a courtship ritual between a rooster and a hen. Its lively steps and handkerchief flourishes are a staple at festivals.</p>
+    </div>
+    <div class="card">
+      <h3>Valparaíso's Street Art</h3>
+      <p>The port city of Valparaíso is a UNESCO World Heritage site, famous for its colorful houses and a vibrant street art scene that turns the city into an open-air gallery.</p>
+    </div>
+    <div class="card">
+      <h3>Chilean Cuisine</h3>
+      <p>From fresh seafood along the coast to hearty stews like 'cazuela' and savory 'empanadas de pino', Chilean food is a delicious reflection of its diverse geography.</p>
+    </div>
+    <div class="card">
+      <h3>Wine Country</h3>
+      <p>Chile's central valleys are renowned for producing world-class wines, particularly Carménère, a grape variety that has become the nation's signature.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Cultural Icons -->
+<section class="section container">
+  <h2>Cultural Icons</h2>
+  <div class="fe-grid">
+    <div class="card fe"><h3>Pablo Neruda</h3><p>A Nobel Prize-winning poet whose passionate verses captured the heart of a nation and the world.</p></div>
+    <div class="card fe"><h3>Violeta Parra</h3><p>A foundational figure of the 'Nueva Canción Chilena' folk music movement and a celebrated visual artist.</p></div>
+    <div class="card fe"><h3>Gabriela Mistral</h3><p>The first Latin American author to receive the Nobel Prize in Literature, known for her powerful poetry.</p></div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section container">
+  <h2>NFL by the Numbers</h2>
+  <div class="stats">
+    <div class="stat"><div class="n">16</div><div class="t">Regions</div></div>
+    <div class="stat"><div class="n">6,000+</div><div class="t">km of Coastline</div></div>
+    <div class="stat"><div class="n">2</div><div class="t">Nobel Poets</div></div>
+    <div class="stat"><div class="n">10+</div><div class="t">Indigenous Peoples</div></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section container">
+  <div class="cta card">
+    <h2>Have a favorite aspect of Chilean culture?</h2>
+    <p>Share your thoughts about the art, music, food, or places you love. We celebrate the stories that make Chile so unique.</p>
+    <form id="contact-form" style="max-width:720px;margin:18px auto 0;text-align:left">
+      <div class="form-row">
+        <div><label>Name</label><input name="name" required placeholder="Ada Lovelace"></div>
+        <div><label>Email</label><input name="email" required type="email" placeholder="you@company.com"></div>
+      </div>
+      <div style="height:12px"></div>
+      <div><label>Message</label><textarea name="message" rows="4" placeholder="Share your favorite NFL era or player."></textarea></div>
+      <div style="height:18px"></div>
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© 2025 Chile Culture. All rights reserved.</div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <span class="badge">Poetry • Landscape • Heritage</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Legal Footer -->
+<footer style="background:#0A2540;color:#e5e7eb;border-top:1px solid #2d507a">
+  <div style="max-width:960px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+    <div style="opacity:.9">© 2025 Chile Culture</div>
+    <nav style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="privacy.html" style="color:#B87333;text-decoration:none">Privacy</a>
+      <a href="cookie-policy.html" style="color:#B87333;text-decoration:none">Cookie Policy</a>
+      <a href="disclaimer.html" style="color:#B87333;text-decoration:none">Disclaimer</a>
+      <a href="community-guidelines.html" style="color:#B87333;text-decoration:none">Community Guidelines</a>
+      <a href="dmca.html" style="color:#B87333;text-decoration:none">DMCA</a>
+      <a href="faq.html" style="color:#B87333;text-decoration:none">FAQ</a>
+      <a href="sitemap.html" style="color:#B87333;text-decoration:none">Sitemap</a>
+      <a href="contact.html" style="color:#B87333;text-decoration:none">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
